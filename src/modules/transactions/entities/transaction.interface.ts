@@ -1,6 +1,7 @@
 import { IconsEnum } from '../../../shared/enums/icons.enum';
 import { ParticipantInterface } from '../../participants/entities/participant.interface';
-import { GroupInterface } from '../../groups/group.interface';
+import { GroupInterface } from '../../groups/entities/group.interface';
+import { UserInterface } from '../../users/entities/UserInterface';
 
 export interface TransactionInterface {
   id: string;
@@ -10,10 +11,10 @@ export interface TransactionInterface {
   icon: IconsEnum;
   isSettled: boolean;
   groupId: string;
-  ownedId: string;
   creatorId: string;
 
-  owner?: ParticipantInterface;
+  owners?: ParticipantInterface[];
   creator?: ParticipantInterface;
   group?: GroupInterface;
+  creators?: UserInterface;
 }
