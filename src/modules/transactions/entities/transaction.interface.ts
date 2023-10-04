@@ -1,19 +1,20 @@
-import {IconsEnum} from "../../../shared/enums/icons.enum";
-import {ParticipantInterface} from "../../participants/entities/participant.interface";
-import {GroupInterface} from "../../groups/group.interface";
+import { IconsEnum } from '../../../shared/enums/icons.enum';
+import { ParticipantInterface } from '../../participants/entities/participant.interface';
+import { GroupInterface } from '../../groups/entities/group.interface';
+import { UserInterface } from '../../users/entities/UserInterface';
 
 export interface TransactionInterface {
-    id: string;
-    title: string;
-    description: string;
-    total: number;
-    icon: IconsEnum;
-    isSettled: boolean;
-    groupId: string;
-    ownedId: string;
-    creatorId: string;
+  id: string;
+  title: string;
+  description: string;
+  total: number;
+  icon: IconsEnum;
+  isSettled: boolean;
+  groupId: string;
+  creatorId: string;
 
-    owner?: ParticipantInterface;
-    creator?: ParticipantInterface;
-    group?: GroupInterface;
+  owners?: ParticipantInterface[];
+  creator?: ParticipantInterface;
+  group?: GroupInterface;
+  creators?: UserInterface;
 }
