@@ -1,3 +1,7 @@
 export enum IconsEnum {
-    HOUSE='house',
+  lock = "lock",
+  eye = "eye",
+  eye_slash = "eye_slash",
+  person = "person",
+  key = "key",
 }
