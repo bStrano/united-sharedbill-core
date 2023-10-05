@@ -8,6 +8,7 @@ export interface GroupInterface {
   description: string;
   icon: IconsEnum;
   ownerId: string;
+  participantsCount: number;
   owner?: ParticipantInterface;
   participants?: ParticipantInterface[];
   groupInvitations?: ParticipantInvation[];
