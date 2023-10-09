@@ -1,7 +1,8 @@
 import { IconsEnum } from '../../../shared/enums/icons.enum';
-import { ParticipantInterface } from '../../participants/entities/participant.interface';
 import { GroupInterface } from '../../groups/entities/group.interface';
 import { UserInterface } from '../../users/entities/UserInterface';
+import { TransactionOwnerInterface } from '../../transaction-owners/entities/transaction-owner.interface';
+import { TransactionDebtorInterface } from '../../transaction-debtors/entities/transaction-debtor.interface';
 
 export interface TransactionInterface {
   id: string;
@@ -13,8 +14,8 @@ export interface TransactionInterface {
   groupId: string;
   creatorId: string;
 
-  owners?: ParticipantInterface[];
-  creator?: ParticipantInterface;
+  debtor?: TransactionDebtorInterface[];
+  owners?: TransactionOwnerInterface[];
+  creator?: UserInterface;
   group?: GroupInterface;
-  creators?: UserInterface;
 }

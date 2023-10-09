@@ -1,6 +1,7 @@
 import { ParticipantInterface } from '../../participants/entities/participant.interface';
 import { IconsEnum } from '../../../shared/enums/icons.enum';
 import { ParticipantInvation } from '../../participants/entities/participant-invation';
+import { UserInterface } from '../../users/entities/UserInterface';
 
 export interface GroupInterface {
   id: string;
@@ -9,9 +10,9 @@ export interface GroupInterface {
   icon: IconsEnum;
   ownerId: string;
   participantsCount: number;
-  owner?: ParticipantInterface;
+  owner?: UserInterface;
   participants?: ParticipantInterface[];
   groupInvitations?: ParticipantInvation[];
   createdAt: Date;
-  updatedAt: Date;
+  updatedAt?: Date;
 }
