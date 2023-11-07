@@ -4,7 +4,7 @@ export interface CreateTransactionDtoInterface {
   total: number;
   groupId: string;
   owners: ParticipantAmountInterface[];
-  participants: ParticipantAmountInterface[];
+  debtors: ParticipantAmountInterface[];
 }
 
 export interface ParticipantAmountInterface {

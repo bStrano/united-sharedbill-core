@@ -11,4 +11,6 @@ export interface ParticipantInterface {
   transactions?: TransactionInterface[];
   transactionOwners?: TransactionOwnerInterface[];
   transactionDebtors?: TransactionDebtorInterface[];
+  createdAt: Date;
+  updatedAt?: Date;
 }
