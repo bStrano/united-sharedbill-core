@@ -13,9 +13,10 @@ export interface TransactionInterface {
   isSettled: boolean;
   groupId: string;
   creatorId: string;
-
-  debtor?: TransactionDebtorInterface[];
+  debtors?: TransactionDebtorInterface[];
   owners?: TransactionOwnerInterface[];
   creator?: UserInterface;
   group?: GroupInterface;
+  createdAt: Date;
+  updatedAt: Date;
 }

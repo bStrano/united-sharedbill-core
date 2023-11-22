@@ -2,6 +2,7 @@ import { TransactionInterface } from '../../transactions/entities/transaction.in
 import { TransactionDebtorInterface } from '../../transaction-debtors/entities/transaction-debtor.interface';
 import { TransactionOwnerInterface } from '../../transaction-owners/entities/transaction-owner.interface';
 import { GroupInterface } from '../../groups/entities/group.interface';
+import { UserInterface } from '../../users/entities/UserInterface';
 
 export interface ParticipantInterface {
   id: string;
@@ -11,6 +12,7 @@ export interface ParticipantInterface {
   transactions?: TransactionInterface[];
   transactionOwners?: TransactionOwnerInterface[];
   transactionDebtors?: TransactionDebtorInterface[];
+  user?: UserInterface;
   createdAt: Date;
   updatedAt?: Date;
 }
