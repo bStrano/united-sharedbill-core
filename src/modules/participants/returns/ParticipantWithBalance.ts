@@ -1,6 +1,10 @@
-import { ParticipantInterface } from '../entities/participant.interface';
-
-export interface ParticipantWithBalance extends ParticipantInterface {
+export interface ParticipantWithBalance {
+  user: {
+    id: string;
+    name: string;
+    email: string;
+    avatar: string;
+  };
   balance: number;
   credit: number;
   debit: number;
