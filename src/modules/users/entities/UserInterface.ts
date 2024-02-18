@@ -7,6 +7,7 @@ export interface UserInterface {
   name: string;
   email: string;
   oauthId: string;
+  avatar?: string;
   password: string;
   groups?: GroupInterface[];
   participants?: ParticipantInterface[];
